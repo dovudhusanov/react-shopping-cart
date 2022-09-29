@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import "./Home.css";
 import {axiosInstance} from "../../api/api";
 import {getProductsAction} from "../../api/Products";
 import {Link} from "react-router-dom";
@@ -28,13 +29,13 @@ function Home(props) {
                     <>
                         {products.map((product, index) => (
                             <div className="home-products">
-                                <Link to={`/product/${product.id}`} key={product.id}>
                                     <ProductsCard
+                                        key={product.id}
                                         img={product.image}
                                         title={product.title}
                                         price={product.price}
+                                        product={product}
                                     />
-                                </Link>
                             </div>
                         ))}
                     </>

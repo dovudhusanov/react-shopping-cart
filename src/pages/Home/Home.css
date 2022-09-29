@@ -1,0 +1,11 @@
+.home-products-card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 600px;
+}
+
+.home-products{
+    width: 350px;
+}

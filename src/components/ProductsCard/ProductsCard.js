@@ -1,10 +1,13 @@
 import React from 'react';
 import "./ProductsCard.css"
+import {Link} from "react-router-dom";
 
-function ProductsCard({img, title, price}) {
+function ProductsCard({img, title, price, product}) {
     return (
         <div className="products-card">
-            <img src={img} alt={title}/>
+            <Link to={`/product/${product.id}`}>
+                <img src={img} alt={title}/>
+            </Link>
             <h2>{title}</h2>
             <div className="price">
                 <div className="price-text">

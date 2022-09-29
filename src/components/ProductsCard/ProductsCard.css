@@ -3,11 +3,12 @@
     max-width: 350px;
     min-height: 500px;
     border: 1px solid rgba(128, 128, 128, 0.42);
+    margin: 20px;
 }
 
 .products-card img{
-    width: 400px;
-    height: 500px;
-    /*object-fit: cover;*/
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
-
