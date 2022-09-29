@@ -1,3 +1,3 @@
 import {axiosInstance} from "./api";
 
-export const getProductsAction = () =>  axiosInstance.get('/products')
+export const getProductsAction = () => axiosInstance.get('/products')

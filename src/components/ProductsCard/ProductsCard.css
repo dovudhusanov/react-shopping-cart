@@ -1,0 +1,13 @@
+.products-card {
+    border-radius: 5px;
+    max-width: 350px;
+    min-height: 500px;
+    border: 1px solid rgba(128, 128, 128, 0.42);
+}
+
+.products-card img{
+    width: 400px;
+    height: 500px;
+    /*object-fit: cover;*/
+}
+
