@@ -22,7 +22,7 @@ function Home(props) {
 
     return (
         <>
-            <div className="home-products-card">
+            <div className="home-products-card product-container">
                 {Object.keys(products).length === 0 ? (
                     <h1 style={{color: "blue", textAlign: "center", marginTop: "-10px"}}>Loading...</h1>
                 ) : (

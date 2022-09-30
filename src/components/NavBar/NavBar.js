@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import "./NavBar.css"
 import Logo from "../../Images/logo.png";
+import {Link} from "react-router-dom";
 
 function NavBar(props) {
 
@@ -16,7 +17,7 @@ function NavBar(props) {
         <nav className="navbar">
             <div className="container">
                 <div className="nav">
-                    <img src={Logo} alt="logo" className="logo"/>
+                    <a href="/"><img src={Logo} alt="logo" className="logo"/></a>
                     <div className="search-input">
                         <input
                             type="search"
