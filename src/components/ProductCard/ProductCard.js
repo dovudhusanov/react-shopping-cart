@@ -8,7 +8,8 @@ function ProductCard({id, title, image, desc, price, data}) {
     const [cartData, setCartData] = useState([])
 
 
-    const addProductToBusket  = () => {
+    const addProductToBusket  = (data, e) => {
+        e.preventDefault()
         addToCart(data)
     }
 
@@ -21,7 +22,7 @@ function ProductCard({id, title, image, desc, price, data}) {
                     <p>{desc}</p>
                     <div className="full-info-price-btn price-text">
                         <span className="">Price: <h2 style={{color: "#000"}}>${price}</h2></span>
-                        <button onClick={() => addToCart(data)} className="add-to-cart">Add to Cart <i
+                        <button onClick={() => addProductToBusket(data)} className="add-to-cart">Add to Cart <i
                             className="fa-regular fa-cart-shopping"></i>
                         </button>
                     </div>

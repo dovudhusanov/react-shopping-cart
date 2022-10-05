@@ -3,7 +3,7 @@ import {json} from "react-router-dom";
 
 const initialState = {
     productInCartNum: JSON.parse(localStorage.getItem("productNum")) || [],
-    dataCart: JSON.parse(localStorage.getItem("cartData")) || []
+    dataCart: JSON.parse(localStorage.getItem("cartData")) || [{title: "not found"}]
 }
 
 export const Context = createContext(initialState)
