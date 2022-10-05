@@ -1,33 +1,27 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import "./CartModal.css"
 import {Context} from "../../context/context";
 
 function CartModal(props) {
 
-    const {dataInCart, cartRef, ref, removeRef} = useContext(Context)
-    console.log(dataInCart)
+    const {dataInCart, cartRef, ref, removeRef,products} = useContext(Context)
     document.addEventListener("click", removeRef)
-
-    const data = () => {
-        const {id, title, image, description, price} = dataInCart
-        return (
-            <div key={id} className="cart-product">
-                <img src={image} alt={title}/>
-                <h1>{title}</h1>
-                <p>{description}</p>
-                <div className="price-btn">
-                    <span>${price}</span>
-                    <button className="delete-product-btn">delete</button>
-                </div>
-            </div>
-        )
-    };
 
     return (
         <div className="cart-modal-bg" ref={ref}>
             <div className="cart-modal" onClick={event => event.stopPropagation()}>
                 <i className="fa-solid fa-xmark closeCart" onClick={cartRef}></i>
-                {data()}
+                {products.map((data, index) => (
+                    <div key={data.id} className="cart-product">
+                        <img src={data.image} alt={data.title}/>
+                        <h1>{data.title}</h1>
+                        <p>{data.description}</p>
+                        <div className="price-btn">
+                            <span>${data.price}</span>
+                            <button className="delete-product-btn">delete</button>
+                        </div>
+                    </div>
+                ))}
         </div>
         </div>
     );

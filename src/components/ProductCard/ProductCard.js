@@ -3,24 +3,13 @@ import "./ProductCard.css"
 import {Context} from "../../context/context";
 
 function ProductCard({id, title, image, desc, price, data}) {
-
-    const {productInCart, setDataInCart, dataInCart} = useContext(Context)
+    const {productInCart,addToCart, setDataInCart, dataInCart} = useContext(Context)
     const [num, setNum] = useState(productInCart)
     const [cartData, setCartData] = useState([])
 
-    useEffect(() => {
-        localStorage.setItem("productNum", JSON.stringify(num));
-    }, [num])
 
-    useEffect(() => {
-        localStorage.setItem("cartData", JSON.stringify(dataInCart))
-    }, [num])
-
-
-    function addToCart(data) {
-        setNum(num + 1)
-        console.log(data)
-        setDataInCart(data)
+    const addProductToBusket  = () => {
+        addToCart(data)
     }
 
     return (
