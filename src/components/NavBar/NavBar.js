@@ -34,7 +34,7 @@ function NavBar(props) {
                     </div>
                     <button className="btn" onClick={cartRef}>
                         Your Cart <i className="fa-regular fa-cart-shopping"></i>
-                        <span className="productInCart">{products.length}</span>
+                        <span className="productInCart">0</span>
                     </button>
                 </div>
             </div>
