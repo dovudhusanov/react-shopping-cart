@@ -14,9 +14,11 @@ function ProductsCard({img, title, price, product}) {
                     <span>Price :</span>
                     <h3>${price}</h3>
                 </div>
-                <button className="btn__to-cart">
-                    <i className="fa-regular fa-cart-shopping"></i>
-                </button>
+                <Link to={`/product/${product.id}`}>
+                    <button className="btn__to-cart">
+                        <i className="fa-regular fa-cart-shopping"></i>
+                    </button>
+                </Link>
             </div>
         </div>
     );

@@ -9,6 +9,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+img{
+    max-width: 100%;
+    display: block;
+}
+
 .container {
     max-width: 1120px;
     margin: 0 auto;
@@ -21,7 +26,22 @@
     padding: 0 15px;
 }
 
+.product-info-container{
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 img{
     max-width: 100%;
     display: block;
+}
+
+.back {
+    position: relative;
+    top: 100px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+    z-index: 1000;
 }

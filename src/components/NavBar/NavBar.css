@@ -3,6 +3,10 @@
     background-color: white;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     height: 70px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
 }
 
 .nav{
@@ -79,6 +83,7 @@
     font-weight: bold;
     font-size: 13px;
     transition: 0.4s ease;
+    position: relative;
 }
 
 .btn:hover{
@@ -96,4 +101,19 @@
 
 .btn:hover i{
     color: #fff;
+}
+
+.productInCart {
+    position: absolute;
+    color: #ffffff;
+    background: red;
+    font-size: 10px;
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    right: 16px;
+    top: 3px;
 }
