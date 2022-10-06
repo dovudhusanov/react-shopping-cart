@@ -17,7 +17,7 @@ function App() {
         <>
             <ContextProvider>
                 <NavBar/>
-                <CartModal />
+                <CartModal/>
                 <Router>
                     <Routes>
                         <Route path="/" element={<Home/>}/>

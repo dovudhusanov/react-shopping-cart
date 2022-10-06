@@ -3,12 +3,12 @@ import "./ProductCard.css"
 import {Context} from "../../context/context";
 
 function ProductCard({id, title, image, desc, price, data}) {
-    const {productInCart,addToCart, setDataInCart, dataInCart} = useContext(Context)
+    const {productInCart, addToCart, setDataInCart, dataInCart} = useContext(Context)
     const [num, setNum] = useState(productInCart)
     const [cartData, setCartData] = useState([])
 
 
-    const addProductToBusket  = (data, e) => {
+    const addProductToBusket = (data, e) => {
         e.preventDefault()
         addToCart(data)
     }
