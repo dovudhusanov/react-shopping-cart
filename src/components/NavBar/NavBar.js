@@ -13,8 +13,8 @@ function NavBar(props) {
     const handleChange = (e) => {
         setSearch({...search, [e.target.name]: e.target.value})
     }
-    const {productInCart} = useContext(Context)
-    let products = JSON.parse(localStorage.getItem('product'))
+    const {productInCart, dataInCart} = useContext(Context)
+    const [num, setNum] = useState([dataInCart])
     const {cartRef} = useContext(Context)
     return (
         <nav className="navbar">
@@ -34,7 +34,7 @@ function NavBar(props) {
                     </div>
                     <button className="btn" onClick={cartRef}>
                         Your Cart <i className="fa-regular fa-cart-shopping"></i>
-                        <span className="productInCart">0</span>
+                        <span className="productInCart">{num.length}</span>
                     </button>
                 </div>
             </div>

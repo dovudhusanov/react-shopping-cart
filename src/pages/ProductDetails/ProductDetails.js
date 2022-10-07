@@ -13,7 +13,7 @@ function ProductDetails(props) {
     const getProduct =  async () => {
         setLoading(true)
         await axiosInstance(getProductAction(productId).then(res => {
-            setProducts(res.data)
+            setProducts([res.data])
         })
             .catch(err => console.error("Error", err.message))
         )
@@ -27,20 +27,20 @@ function ProductDetails(props) {
 
     }, [])
 
-    const productDetail = () => {
-        const {id, title, price, description, image} = products
-        return (
-            <ProductCard
-                data={products}
-                key={id}
-                id={id}
-                title={title}
-                price={price}
-                desc={description}
-                image={image}
-            />
-        )
-    }
+    // const productDetail = () => {
+    //     const {id, title, price, description, image} = products
+    //     return (
+    //         <ProductCard
+    //             datas={products}
+    //             key={id}
+    //             id={id}
+    //             title={title}
+    //             price={price}
+    //             desc={description}
+    //             image={image}
+    //         />
+    //     )
+    // }
 
     return (
         <div className="product-info-container">
@@ -49,7 +49,17 @@ function ProductDetails(props) {
             ) : (
                 <>
                     <Link to={`/`}><span className="back"><i className="fa-solid fa-left"></i> Back</span></Link>
-                    {productDetail()}
+                    {products.map((data, index) => (
+                        <ProductCard
+                            datas={data}
+                            key={data.id}
+                            id={data.id}
+                            title={data.title}
+                            price={data.price}
+                            desc={data.description}
+                            image={data.image}
+                        />
+                    ))}
                 </>
             )}
         </div>

@@ -2,16 +2,14 @@ import React, {useContext, useEffect, useState} from 'react';
 import "./ProductCard.css"
 import {Context} from "../../context/context";
 
-function ProductCard({id, title, image, desc, price, data}) {
+function ProductCard({id, title, image, desc, price, datas}) {
     const {productInCart, addToCart, setDataInCart, dataInCart} = useContext(Context)
-    const [num, setNum] = useState(productInCart)
-    const [cartData, setCartData] = useState([])
 
-
-    const addProductToBusket = (data, e) => {
-        e.preventDefault()
+    const addProductToBusket = (data) => {
         addToCart(data)
     }
+
+    console.log(datas)
 
     return (
         <div className="product-card">
@@ -22,7 +20,7 @@ function ProductCard({id, title, image, desc, price, data}) {
                     <p>{desc}</p>
                     <div className="full-info-price-btn price-text">
                         <span className="">Price: <h2 style={{color: "#000"}}>${price}</h2></span>
-                        <button onClick={() => addProductToBusket(data)} className="add-to-cart">Add to Cart <i
+                        <button onClick={() => addProductToBusket(datas)} className="add-to-cart">Add to Cart <i
                             className="fa-regular fa-cart-shopping"></i>
                         </button>
                     </div>

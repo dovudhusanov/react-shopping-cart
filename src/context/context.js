@@ -3,16 +3,15 @@ import {json} from "react-router-dom";
 
 const initialState = {
     productInCartNum: JSON.parse(localStorage.getItem("productNum")) || [],
-    dataCart: JSON.parse(localStorage.getItem("cartData")) || [{title: "not found"}]
+    dataCart: JSON.parse(localStorage.getItem("product")) || []
 }
 
 export const Context = createContext(initialState)
 
 export const ContextProvider = ({children}) => {
     const [productInCart, setProductInCart] = useState(initialState.productInCartNum)
-    const [dataInCart, setDataInCart] = useState(initialState.dataCart)
-    let products = useState(JSON.parse(localStorage.getItem("product")))
-    const saveProduct = (product) => localStorage.setItem('product', JSON.stringify(product))
+    const [dataInCart, setDataInCart] = useState([initialState.dataCart])
+    const saveProduct = (product) => setDataInCart([...dataInCart, dataInCart.push(localStorage.setItem('product', JSON.stringify(product)))])
     const ref = useRef()
     const cartRef = (e) => {
         e.stopPropagation()
@@ -24,13 +23,11 @@ export const ContextProvider = ({children}) => {
     }
 
     const addToCart = (product) => {
-        products = [...products, product]
-        saveProduct(products)
-        window.location.reload()
+        saveProduct(product)
     }
 
     const value = {
-        productInCart, setProductInCart, dataInCart, setDataInCart, cartRef, ref, removeRef, addToCart, products
+        productInCart, setProductInCart, dataInCart, setDataInCart, cartRef, ref, removeRef, addToCart
     }
 
     return (
