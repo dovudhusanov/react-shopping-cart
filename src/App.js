@@ -17,8 +17,6 @@ function App() {
     return (
         <>
             <ContextProvider>
-                {/*<NavBar/>*/}
-                {/*<CartModal />*/}
                 <Router>
                     <Routes>
                         {/*<Route path="/" element={<Home/>}/>*/}
