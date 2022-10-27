@@ -27,7 +27,6 @@ export const ContextProvider = ({children}) => {
         products = [...products, product]
         saveProduct(products)
         window.location.reload()
-
     }
 
     const value = {
