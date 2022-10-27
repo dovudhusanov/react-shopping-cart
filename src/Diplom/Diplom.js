@@ -27,7 +27,7 @@ function Diplom(props) {
                         <tbody>
                         <tr>
                             <th>Familiya:</th>
-                            <td>SAIBBAEV</td>
+                            <td>SOIBBAEV</td>
                         </tr>
                         <tr>
                             <th>Ismi:</th>
