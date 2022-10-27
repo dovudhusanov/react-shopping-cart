@@ -10,7 +10,7 @@ import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 import {ContextProvider} from "./context/context";
 import CartModal from "./components/CartModal/CartModal";
-import Diplom from "./Diplom";
+import Diplom from "./Diplom/Diplom";
 
 function App() {
 

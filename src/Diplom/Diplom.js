@@ -1,4 +1,11 @@
 import React, {useEffect} from 'react';
+import "./AdminLTE.min.css"
+import "./front.css"
+import "./checkBo.min.css"
+import "./skin-blue.min.css"
+import "./bootstrap.css"
+import "./blue.css"
+import "./jquery-ui.css"
 import {useNavigate} from "react-router-dom";
 
 function Diplom(props) {

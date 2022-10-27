@@ -4,10 +4,11 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
 html {
-  font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-family: 'Source Sans Pro',sans-serif !important;
 }
 body {
   margin: 0;
@@ -263,11 +264,7 @@ th {
     border: 1px solid #ddd !important;
   }
 }
-@font-face {
-  font-family: "Glyphicons Halflings";
-  src: url("../fonts/glyphicons-halflings-regular.eot");
-  src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
-}
+
 .glyphicon {
   position: relative;
   top: 1px;
@@ -6608,22 +6605,14 @@ button.close {
 .invisible {
   visibility: hidden;
 }
-.text-hide {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
+
 .hidden {
   display: none !important;
 }
 .affix {
   position: fixed;
 }
-@-ms-viewport {
-  width: device-width;
-}
+
 .visible-xs,
 .visible-sm,
 .visible-md,
